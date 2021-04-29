@@ -1,0 +1,106 @@
+/* <!-- El input por defecto es un elemento inline, 
+esto quiere decir solo tomara el ancho de su contenido
+para mostrarse en el viewport,  permitiendo que otros elementos
+se posicionen al lado de el -->
+
+    <!-- Contrario a los elementos inline, los elementos de bloque, como
+el <p>, toman siempre todo el ancho del viewport, indistintamente si su
+contenido interno llegara a necesitarlo, o no --> */
+
+/* para modificar el comportamiento inline de los inputs
+    podemos crear una regla CSS que escoja todos los inputs, con un 
+    selector de etiqueta input y con la ayuda de 
+    la propiedad - display:block - para asi convertirlos en elementos de bloque, 
+    es decir, que cada input tome todo el espacio a lo ancho del viewport*/
+
+/* observa como los tres primeros inputs presentados en el html
+  se muestran uno al lado del otro (username, password, email), 
+  ahora, dentro de la siguiente regla CSS agrega la propiedad: 
+  
+  display:block 
+  
+  para cambiar su comportamiento inline */
+/* input { */
+/* sustituye esta línea por display:block */
+/* display:block;
+  margin-top: 5px; */
+/* } */
+
+/* al convertirlos en elementos de bloque, cada uno se toma todo 
+  el espacio a lo ancho, impidiendo que otros elementos se posicionen al lado */
+
+/* ¿notaste tambien como el cambio de display block 
+  afectó a los checkboxes? */
+
+* {
+  font-family: "Roboto", sans-serif;
+}
+
+.container {
+  width: 40%;
+  display: inline-block;
+  padding: 1rem 2rem;
+  background-color: rgb(222, 219, 224);
+  margin: 30px 20px;
+  border: 3px solid grey;
+  border-radius: 5px;
+}
+
+.input-moderno {
+  border: 2px solid rgb(73, 70, 70);
+  padding: 1rem 2rem;
+  border-radius: 5px;
+  font-size: 15px;
+}
+
+.input-moderno:hover,
+.plato-favorito:hover,
+.boton-fecha:hover {
+  background-color: rgb(175, 210, 238);
+}
+.input-moderno:focus,
+.plato-favorito:focus {
+  background-color: rgb(237, 238, 175);
+}
+/* TODO:me queda duda de comoer poner pseudo clases a mas de un elemento, para reutilizar el código
+Está bien escrito así? */
+
+#block {
+  display: block;
+  margin-top: 1rem;
+}
+
+.boton-fecha {
+  padding: 1rem 1em;
+  font-size: 18px;
+  border: 1px solid grey;
+}
+
+.plato-favorito {
+  font-size: 15px;
+  padding: 5px 15px;
+}
+
+.boton-enviar {
+  margin: 1rem 1rem;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.boton-enviar input {
+  padding: 0rem 3rem;
+  font-size: 18px;
+  border: 1px solid grey;
+  font-weight: bold; 
+}
+
+.boton-enviar input:active {
+  background-color: rgb(41, 151, 241);
+  border: 1px solid grey;
+  color: white;
+  font-weight: bold;
+}
+
+/*TODO: Problema que en vista de celular los inputs bloques sobrepasan el contenedor
+¿como hacer para que el contenedor principal se amolde a los elementos? */
+/* En viste en celular no se llega a ver el fondo del formulario, ¿Por que? */

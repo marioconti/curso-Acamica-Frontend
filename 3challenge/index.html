@@ -1,0 +1,145 @@
+<!-- INSTRUCCIONES PARA EL CHALLENGE -->
+<!-- 
+
+  Dale estilos a los diferentes inputs del formulario creando reglas CSS 
+  que agreguen un poco más de vida a lo presentado.
+
+  Por ejemplo, agrega la definición de esta clase dentro de 
+  la etiqueta <style>:
+
+  .input-moderno {
+    border: 2px solid black;
+    padding: 15px;
+    border-radius: 5px;
+    font-size: 15px;
+    background-color: lightpink;
+  }
+
+  Y luego asignala a alguno de los inputs de texto, de esta forma:
+
+  <input class="input-moderno" type="text" placeholder="Ingrega tu username:" />
+
+  observa como dejamos los otros dos atributos intactos, y solo
+  agregamos uno nuevo: class.
+
+  ¿Que otros estilos puedes crear?
+  ¿Puedes darle estilos al select?
+  ¿Que tal al input de la fecha?
+ -->
+
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="estilos.css" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap"
+      rel="stylesheet"
+    />
+    <title>Formulario</title>
+  </head>
+  <body>
+    <div class="container">
+      <form>
+        <h1><b>Formulario de acceso</b></h1>
+        <hr />
+        <label><b>Ingresa tus datos aquí:</b></label>
+        <input
+          id="block"
+          class="input-moderno"
+          name="userName"
+          type="text"
+          placeholder="Ingresa tu username:"
+          required
+        />
+        <input
+          id="block"
+          class="input-moderno"
+          name="password"
+          type="password"
+          placeholder="Ingresa tu password:"
+          required
+        />
+        <input
+          id="block"
+          class="input-moderno"
+          name="email"
+          type="email"
+          placeholder="Ingresa tu email"
+          required
+        />
+        <!-- el atributo autocomplete="off" cancela el autocompletado -->
+        <hr />
+        <div>
+          <h3>Ingresa tu fecha de nacimiento:</h3>
+          <input class="boton-fecha" type="date" required />
+          <hr />
+        </div>
+        <div>
+          <h3>Escoge tu color favorito</h3>
+          <input type="color" required />
+          <!-- con la etiqueta <br /> podemos hacer un salto de línea -->
+          <br />
+          <!-- copia y pega la etiqueta <br /> 5 veces debajo de este comentario -->
+          <br />
+          <br />
+          <br />
+          <br />
+          <br />
+          <hr />
+        </div>
+        <div>
+          <h3>El clima en mi ciudad esta:</h3>
+
+          <span>Cálido</span>
+          <input type="range" value="3" />
+          <!-- en este caso ya viene un valor predeterminado -->
+          <!--TODO: se puede sacar el valor predeterminado? -->
+          <!-- no podría ponerse required -->
+          <span>Frio</span>
+
+          <br />
+          <br />
+          <br />
+          <hr />
+        </div>
+        <div>
+          <br />
+          <!-- TODO:En este caso al usar un span no se puede usar atributos para modificarlo, ej required -->
+          <span><b> Mi plato favorito es:</b></span>
+          <!-- la etiqueta <select> se usa anidando etiquetas <options>, similar
+          a la etiqueta <ul> con las <li> -->
+          <select class="plato-favorito" value="6">
+            <option value="0" selected disabled>Escoge una opción</option>
+            <!-- disable sirve para deshabilitar la opción -->
+            <option value="1">Hamburguesa</option>
+            <option value="2">Pizza</option>
+            <option value="3">Pasta</option>
+            <option value="4">Ensalada</option>
+            <option value="5">Todos los anteriores</option>
+          </select>
+          <br />
+          <br />
+          <hr />
+        </div>
+        <div>
+          <h3>Deseo recordar mis datos de login:</h3>
+          Si
+          <input type="radio" name="hola" checked/>
+          <!-- TODO:como cambiar el texto que aparece de required -->
+          No
+          <input type="radio" name="hola" />
+          <!-- TODO:VER QUE LOS CHECKBOXES SOLO SE PUEDA SELECCIONAR UNO? -->
+        </div>
+        <div class="boton-enviar">
+          <input type="submit" />
+        </div>
+      </form>
+    </div>
+  </body>
+</html>
+<!-- VER DE CREAR DIVS QUE CONTENGAN LOS INPUTS -->
+
